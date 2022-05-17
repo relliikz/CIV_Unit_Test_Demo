@@ -16,10 +16,12 @@ namespace UnitTestDemoTests
         }
 
         [Theory]
-        [InlineData(25, 5, 5)]
-        public void AddToTest()
+        [InlineData(5, 5, 10)]
+        public void AddToTest(int input, int addition, int expected)
         {
-            Assert.True(false);
+           Bollocks b = new Bollocks(input, "bollocks2");
+            int result = b.AddTo(addition);
+            Assert.Equal(expected, result);
         }
 
         [Theory]
@@ -36,14 +38,25 @@ namespace UnitTestDemoTests
         [Fact]
          public void DivBy_Zero_Test()
         {
-            Assert.True(false);
+            Bollocks b = new Bollocks(10, "bollocks1");
+            try
+            {
+                b.DivBy(0);
+                Assert.True(false);
+            }
+            catch
+            {
+                Assert.True(true);
+            }
+            
         }
 
         [Theory]
-        [InlineData(25, 5, 5)]
-        public void ModOfDivByTest()
+        [InlineData(11, 2, 1)]
+        public void ModOfDivByTest(int input, int mod, int exepected)
         {
-            Assert.True(false);
+            Bollocks b = new Bollocks(input, "bollocks2");
+            Assert.Equal(exepected, b.ModOfDivBy(mod));
         }
     }
 }

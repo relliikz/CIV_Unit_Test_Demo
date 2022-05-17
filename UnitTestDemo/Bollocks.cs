@@ -9,24 +9,25 @@ namespace UnitTestDemo
 
         // assigns values to properties
         public Bollocks(int bollNum, string bollString){
-            throw new NotImplementedException("Bollocks.Constructor");
+            this.bollNum = bollNum;
+            this.bollString = bollString;
         }
 
         // method that returns bollNum summed with the parameter value
         public int AddTo(int n){
-            throw new NotImplementedException("Bollocks.AddTo");
+            return this.bollNum + n;
         } 
  
         // method that DIVIDES bollNum BY 
         // the parameter value and returns the dividend
 
         public int DivBy(int n){
-            throw new NotImplementedException("Bollocks.DivBy");
+            return this.bollNum / n;
         }
         // method that returns the modulud of dividing bollNum BY 
         // the parameter value
         public int ModOfDivBy(int n){
-            throw new NotImplementedException("Bollocks.ModOfDivBy");
+            return this.bollNum % n;
         }
     }
 }
